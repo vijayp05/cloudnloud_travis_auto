@@ -2,11 +2,11 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t cloudnloud/iamshyfail:v1.0 .
+  - docker build -t vspvijay/webapp:v1.0 .
 script:
   - echo "$password" | docker login -u "$username" --password-stdin
   - docker images
-  - docker push cloudnloud/iamshyfail:v1.0
+  - docker push vspvijay/webapp:v1.0
 notifications:
   email:
     recipients:
