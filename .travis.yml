@@ -2,11 +2,11 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t vspvijay/cloudnloud .
+  - docker build -t vspvijay/cloudnloud:v1.0 .
 script:
-  - echo "$VALUE" | docker login -u "$NAME" --password-stdin
+  - echo "$value" | docker login -u "$name" --password-stdin
   - docker images
-  - docker push vspvijay/cloudnloud
+  - docker push vspvijay/cloudnloud:v1.0
 notifications:
   email:
     recipients:
