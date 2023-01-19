@@ -4,7 +4,7 @@ services:
 before_install:
   - docker build -t vspvijay/cloudnloud .
 script:
-  - echo "$NAME" | docker login -u "$VALUE" --password-stdin
+  - echo "$name" | docker login -u "$value" --password-stdin
   - docker images
   - docker push vspvijay/cloudnloud
 notifications:
